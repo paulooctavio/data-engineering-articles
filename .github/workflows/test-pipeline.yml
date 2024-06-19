@@ -1,4 +1,4 @@
-name: Test Data Pipeline
+name: CI/CD for Data Pipeline
 
 on: [push, pull_request]
 
@@ -18,7 +18,12 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest
+        pip install -r requirements.txt
+
+    - name: Lint code
+      run: |
+        pip install flake8
+        flake8 data_pipeline.py
 
     - name: Run tests
       run: |
