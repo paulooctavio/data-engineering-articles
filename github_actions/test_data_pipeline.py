@@ -1,5 +1,6 @@
 from data_pipeline import main
 
+
 def test_etl_process():
     result = main()
     if result:
