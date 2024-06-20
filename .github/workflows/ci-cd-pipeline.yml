@@ -3,7 +3,7 @@ name: CI/CD for Data Pipeline
 on: [push, pull_request]
 
 jobs:
-  test:
+  test-and-lint:
     runs-on: ubuntu-latest
 
     steps:
